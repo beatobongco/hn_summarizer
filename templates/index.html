@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <ul>
+    {% for s in summaries %}
+    <li>
+      <div>
+        <p>
+          <strong><a href="{{s['url']}}">{{s['title']}}</a></strong>
+        </p>
+        <p>{{s['minutes']}} minute read</p>
+        <p>{{s['summary']}}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <form>
+    <input type="text" name="q">
+    <button type="submit">Go</button>
+  </form>
+</body>
+</html>
